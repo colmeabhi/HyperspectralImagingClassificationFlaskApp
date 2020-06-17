@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Indian Pines
+  </title>
+  <script type="text/javascript">
+  </script>
+
+  <style>
+        /* CSS   */
+
+        #carddiv {
+          padding: 1% 1% 1% 1%  ;
+          margin-left: 3%;
+          margin-right:3%;
+        }
+
+        .navbar-brand {
+          font-family: "Sofia";
+        }
+
+  </style>
+</head>
+
+<body style="background-color: black">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google fonts CDN -->
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        Indian Pines Classification
+      </a>
+    </nav>
+
+    <br>
+
+    <!-- INSTRUCTIONS DIV -->
+    <div id = "carddiv" class="card text-white bg-info" style="max-width: 100%;">
+      <div class="card-header">Welcome!</div>
+      <div class="card-body">
+        <h5 class="card-title">Instructions</h5>
+        <p class="card-text text-white"> Click on the Buttons to access the Functions </p>
+    </div>
+    </div>
+
+    <br>
+
+    <!-- FUNCTIONS DIVS -->
+    <div id = "carddiv" class="card text-white bg-warning" style="max-width: 30%;">
+      <div class="card-header">Upload dataset</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text text-white">
+
+          <form action="/uploaddataset", method="POST" enctype="multipart/form-data" target='_blank'>
+                <input type="submit" class="btn btn-dark" value = "Submit">
+          </form>
+
+         </p>
+    </div>
+    </div>
+
+    <br>
+
+    <div id = "carddiv" class="card text-white bg-warning" style="max-width: 30%;">
+      <div class="card-header">MLP Classification accuracy_score</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text text-white">
+
+          <form action="/results_MLP", method="POST" enctype="multipart/form-data" target='_blank'>
+                <input type="submit" class="btn btn-dark" value = "Submit" >
+          </form>
+
+         </p>
+    </div>
+    </div>
+
+    <br>
+
+    <div id = "carddiv" class="card text-white bg-warning" style="max-width: 30%;">
+      <div class="card-header">DecisionTrees Classification accuracy_score</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text text-white">
+
+          <form action="/results_DT", method="POST" enctype="multipart/form-data" target='_blank'>
+                <input type="submit" class="btn btn-dark" value = "Submit">
+          </form>
+
+         </p>
+    </div>
+    </div>
+
+  <br>
+
+  <div id = "carddiv" class="card text-white bg-warning" style="max-width: 30%;">
+      <div class="card-header">SVM Classification accuracy_score</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text text-white">
+
+          <form action="/results_SVM", method="POST" enctype="multipart/form-data" target='_blank'>
+                <input type="submit" class="btn btn-dark" value = "Submit">
+          </form>
+
+         </p>
+    </div>
+    </div>
+
+    <br>
+
+    <div id = "carddiv" class="card text-white bg-warning" style="max-width: 30%;">
+      <div class="card-header">Ground Truth Mapped</div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text text-white">
+
+          <a href="gt_image.html" target="_blank">
+                <button type="button" class="btn btn-dark">Submit</button>
+          </a>
+
+         </p>
+    </div>
+    </div>
+
+
+    <!-- END OF UI -->
+
+    <br>
+    <br>
+
+    <!-- # upload image
+    <form action="/upload", method="POST" enctype="multipart/form-data">
+          <label for="img">Select image:</label>
+          <input type="file" name="file" /> # accept="image/*
+          <input type="submit" value = "Submit">
+    </form> -->
+
+</body>
+</html>
